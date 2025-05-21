@@ -69,6 +69,14 @@ video {
   width: 100%;
   height: 100%;
   display: block;
+
+pointer-events: none; /* Disabilita ogni interazione */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+video::-webkit-media-controls {
+  display: none !important;
 }
 
 /* Bottone posizionato rispetto al video */
