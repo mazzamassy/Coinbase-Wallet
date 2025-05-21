@@ -82,6 +82,7 @@ video::-webkit-media-controls {
 
 /* Bottone posizionato rispetto al video */
 .overlay-btn {
+    color: black;
   /* width: 315.5px; */
   /* height: 54.1px; */
   width: 400px;
