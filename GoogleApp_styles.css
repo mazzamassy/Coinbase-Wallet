@@ -54,8 +54,14 @@ body, html {
 /* Contenitore del video con dimensioni fisse */
 .video-wrapper {
   position: relative;
-  width: 357px;     /* Dimensione fissa del video */
-  height: 552px;    /* Dimensione fissa del video */
+  /* width: 357px;
+  height: 552px; */
+  width: 452.7px;
+  height: 700px;
+  min-height: 700px;
+  min-width: 452.7px;
+  max-height: 700px;
+  max-width: 452.7px;
 }
 
 /* Video con dimensione fissa */
@@ -67,17 +73,23 @@ video {
 
 /* Bottone posizionato rispetto al video */
 .overlay-btn {
-  width: 314px;
-  height: 54.1px;
+  /* width: 315.5px; */
+  /* height: 54.1px; */
+  width: 400px;
+  /* height: 68.99px; */
+  height: 68px;
   position: absolute;
-  top: 78.26%;       /* Regola questa percentuale per posizionarlo dove vuoi nel video */
+  /* top: 79%; */
+  top: 78.7%;
   left: 50%;
   transform: translateX(-50%);
   padding: 15px 30px;
   background-color:#ffffff;
+  /* background-color:black; */
   border: none;
   border-radius: 35px;
-  font-size: 17px;
+  /* font-size: 17px; */
+  font-size: 19.6px;
   cursor: pointer;
   font-weight: 500;
   transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
@@ -85,4 +97,30 @@ video {
 
 .overlay-btn:hover {
   background-color: #d8d8d8;
+}
+
+
+.second-btn {
+  width: 400px;
+  height: 68px;
+  position: absolute;
+  /* top: 90.84%; */
+  top: 89.83%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* background-color: #ffffff; */
+  background-color: transparent;
+  border: none;
+  border-radius: 35px;
+  font-size: 19.45px;
+  cursor: pointer;
+  color:#ffffff;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  z-index: 2;
+}
+
+.second-btn:hover {
+  /* background-color: #d8d8d8; */
+  background-color: #0a0a0a ;
 }

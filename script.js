@@ -31,8 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function openGoogleLogin() {
-    const width = 360;
-    const height = 552;
+    // const width = 360;
+    // const height = 552;
+        // const width = 365;
+        // const height = 560;
+            const width = 452.7;
+            const height = 720;
     const left = (screen.width - width) / 2;
     const top = (screen.height - height) / 2;
 
