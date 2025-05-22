@@ -267,7 +267,7 @@ footer {
 }
 
 .cookie-banner {
-  height: 88px;
+  min-height: 88px;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -275,10 +275,12 @@ footer {
   background-color: rgb(238,240,243);
   padding: 12px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 12px;
 }
+
 
 .cookie-message {
   font-size: 14px;
