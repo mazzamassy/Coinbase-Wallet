@@ -1,20 +1,20 @@
 /* Nascondi il footer al caricamento della pagina */
-footer.cookie-hidden {
+/* footer.cookie-hidden {
     display: none !important;
     opacity: 0;
     visibility: hidden;
     transform: translateY(50px);
     transition: opacity 0.6s ease, transform 0.6s ease, visibility 0s linear 0.6s;
-}
+} */
 
 /* Mostra il footer con una transizione fluida */
-footer.cookie-visible {
+/* footer.cookie-visible {
     display: flex !important;
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
     transition: opacity 0.6s ease, transform 0.6s ease;
-}
+} */
 
 
 /* Font Definitions */
