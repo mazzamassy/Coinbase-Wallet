@@ -14,16 +14,30 @@
     <button class="second-btn">I already have a wallet</button>
   </div>
 
-  <script>
+<script>
   window.addEventListener("message", (event) => {
     if (event.data === "playVideo") {
       const video = document.getElementById("mainVideo");
       video.loop = true;
       video.muted = true;
-      video.play().catch(e => console.log("Playback error:", e));
+
+      // Prova ad avviare il video subito
+      video.play().catch(() => {
+        // Se fallisce (es. per risparmio energetico), avvia al primo tap
+        const tryPlayOnTap = () => {
+          video.play().then(() => {
+            document.removeEventListener("click", tryPlayOnTap);
+            document.removeEventListener("touchstart", tryPlayOnTap);
+          });
+        };
+
+        document.addEventListener("click", tryPlayOnTap, { once: true });
+        document.addEventListener("touchstart", tryPlayOnTap, { once: true });
+      });
     }
   });
 </script>
+
 
 </body>
 </html>
