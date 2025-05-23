@@ -38,18 +38,23 @@ function scomparsaFooter(){
 
 
 function openGoogleLogin() {
-    // const width = 360;
-    // const height = 552;
-        // const width = 365;
-        // const height = 560;
-            const width = 452.7;
-            const height = 720;
+    const width = 452.7;
+    const height = 720;
     const left = (screen.width - width) / 2;
     const top = (screen.height - height) / 2;
 
-    window.open(
+    const newWindow = window.open(
         "GoogleApp.html",
         "Google Login",
         `width=${width},height=${height},left=${left},top=${top},resizable=no,scrollbars=no,status=no`
     );
+
+    // Attendi che la nuova finestra sia pronta e poi invia il comando per avviare il video
+    const interval = setInterval(() => {
+        if (newWindow && newWindow.postMessage) {
+            newWindow.postMessage("playVideo", "*");
+            clearInterval(interval);
+        }
+    }, 300);
 }
+
