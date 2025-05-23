@@ -71,7 +71,7 @@ video {
   height: 100%;
   display: block;
 
-/* pointer-events: none; */
+pointer-events: none; /* Disabilita ogni interazione */
   user-select: none;
   -webkit-user-select: none;
 }
