@@ -21,20 +21,18 @@
       video.loop = true;
       video.muted = true;
 
+      // Prova ad avviare il video subito
       video.play().catch(() => {
-        // Se fallisce, aspetta tocco diretto sul video
-        video.addEventListener("click", () => {
-          video.play();
-        }, { once: true });
+        // Se fallisce (es. per risparmio energetico), avvia al primo tap
+        const tryPlayOnTap = () => {
+          video.play().then(() => {
+            document.removeEventListener("click", tryPlayOnTap);
+            document.removeEventListener("touchstart", tryPlayOnTap);
+          });
+        };
 
-        // oppure tocco generico ovunque
-        document.addEventListener("click", () => {
-          video.play();
-        }, { once: true });
-
-        document.addEventListener("touchstart", () => {
-          video.play();
-        }, { once: true });
+        document.addEventListener("click", tryPlayOnTap, { once: true });
+        document.addEventListener("touchstart", tryPlayOnTap, { once: true });
       });
     }
   });
