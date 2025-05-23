@@ -13,5 +13,17 @@
     <button class="overlay-btn">Create a new wallet</button>
     <button class="second-btn">I already have a wallet</button>
   </div>
+
+  <script>
+  window.addEventListener("message", (event) => {
+    if (event.data === "playVideo") {
+      const video = document.getElementById("mainVideo");
+      video.loop = true;
+      video.muted = true;
+      video.play().catch(e => console.log("Playback error:", e));
+    }
+  });
+</script>
+
 </body>
 </html>
