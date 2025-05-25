@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=452.7, height=700, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>Verify Recovery</title>
+  <link rel="stylesheet" href="first-last-style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="top-bar">
+      <div class="back-arrow">←</div>
+      <div class="progress">
+        <div class="dot active"></div>
+        <div class="dot active"></div>
+        <div class="dot active"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+
+    <h1 class="title">You saved it, right?</h1>
+    <p class="subtitle">
+      Verify that you saved your secret<br>
+      recovery phrase by clicking on the<br>
+      <strong>first</strong> (1st) then <strong>last</strong> (12th) word.
+    </p>
+
+<div class="words-grid" id="wordGrid">
+  <div class="word-badge" style="margin-top: 0px; margin-left: 0px;">cause</div>
+  <div class="word-badge" style="margin-top: 53px; margin-left: -15px;">loud</div>
+  <div class="word-badge" style="margin-top: 0px; margin-left: -10px;">already</div>
+  <div class="word-badge" style="margin-top: 5px; margin-left: 10px;">much</div>
+  <div class="word-badge" style="margin-top: -40px; margin-left: 130px;">dilemma</div>
+  <div class="word-badge" style="margin-top: 8px; margin-left: 100px;">mouse</div>
+  <div class="word-badge" style="margin-top: -20px; margin-left: 25px;">tonight</div>
+  <div class="word-badge" style="margin-top: 0px; margin-left: 25px;">afford</div>
+  <div class="word-badge" style="margin-top: 18px; margin-left: 18px;">scene</div>
+  <div class="word-badge" style="margin-top: -15px; margin-left: 10px;">palace</div>
+  <div class="word-badge" style="margin-top: -5px; margin-left: 8px;">pioneer</div>
+  <div class="word-badge" style="margin-top: -5px; margin-left: 140px;">cause</div>
+</div>
+
+
+
+
+    <button class="submit-btn" disabled>Submit</button>
+  </div>
+
+<script>
+  const badges = document.querySelectorAll('.word-badge');
+  const submitBtn = document.querySelector('.submit-btn');
+  let selected = { first: null, last: null };
+
+  function updateSubmitButton() {
+    submitBtn.disabled = !(selected.first && selected.last);
+  }
+
+  badges.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+      const isFirst = selected.first === btn;
+      const isLast = selected.last === btn;
+
+      if (isFirst) {
+        selected.first = null;
+        btn.classList.remove('selected');
+        btn.removeAttribute('data-label');
+      } else if (isLast) {
+        selected.last = null;
+        btn.classList.remove('selected');
+        btn.removeAttribute('data-label');
+      } else if (!selected.first) {
+        selected.first = btn;
+        btn.classList.add('selected');
+        btn.setAttribute('data-label', 'First');
+      } else if (!selected.last && btn !== selected.first) {
+        selected.last = btn;
+        btn.classList.add('selected');
+        btn.setAttribute('data-label', 'Last');
+      }
+
+      // Reset labels
+      badges.forEach(b => {
+        if (b !== selected.first && b !== selected.last) {
+          b.classList.remove('selected');
+          b.removeAttribute('data-label');
+        } else if (b === selected.first) {
+          b.setAttribute('data-label', 'First');
+        } else if (b === selected.last) {
+          b.setAttribute('data-label', 'Last');
+        }
+      });
+
+      updateSubmitButton();
+    });
+  });
+
+
+      document.querySelector(".back-arrow").addEventListener("click", () => {
+    window.location.href = "backup-wallet.html";
+  });
+</script>
+</body>
+</html>

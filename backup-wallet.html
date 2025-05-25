@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coinbase Wallet</title>
+  <link rel="stylesheet" href="backup-wallet.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="top-bar">
+      <div class="back-arrow">←</div>
+      <div class="progress">
+        <div class="dot active"></div>
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+
+    <h1 class="titolo">Back up your wallet</h1>
+    <p class="description">
+      Save these 12 words to a password<br>
+      manager, or write down and store in a<br>
+      secure place. Do not share with<br>
+      anyone.
+    </p>
+
+<div class="phrase-box blurred" id="phraseBox">
+  <div class="phrase-content" id="phraseContent">
+    scene palace dilemma much pioneer loud mouse afford tonight cause song already
+  </div>
+  <img id="eyeIcon" src="non_visible_text.png" alt="Toggle visibility">
+</div>
+
+
+
+<div class="clipboard" id="copyButton">
+  <img id="copyIcon" src="icon_white_1.png" alt="Copy to clipboard" />
+  Copy to clipboard
+</div>
+
+<label class="checkbox-container">
+  <input type="checkbox" id="confirmCheckbox" />
+  I understand that if I lose my recovery<br>
+  phrase, I'll lose all of the crypto in my<br>
+  wallet.
+</label>
+
+
+    <button id="continueBtn" disabled>Continue</button>
+  </div>
+
+<script>
+  const phraseBox = document.getElementById('phraseBox');
+  const phraseContent = document.getElementById('phraseContent');
+  const eyeIcon = document.getElementById('eyeIcon');
+
+  let isBlurred = true;
+
+  phraseBox.addEventListener('click', () => {
+    isBlurred = !isBlurred;
+    phraseBox.classList.toggle('blurred');
+    eyeIcon.src = isBlurred ? 'non_visible_text.png' : 'visible_text_icon.png';
+  });
+
+  const checkbox = document.getElementById('confirmCheckbox');
+  const continueBtn = document.getElementById('continueBtn');
+  checkbox.addEventListener('change', () => {
+    continueBtn.disabled = !checkbox.checked;
+  });
+
+const copyBtn = document.getElementById('copyButton');
+const copyIcon = document.getElementById('copyIcon');
+
+copyBtn.addEventListener('click', () => {
+  const text = document.getElementById('phraseContent').textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    copyIcon.src = 'text-copied.png';
+    copyIcon.classList.add('copied');
+
+    setTimeout(() => {
+      copyIcon.src = 'icon_white_1.png';
+      copyIcon.classList.remove('copied');
+    }, 2000);
+  });
+});
+
+
+
+
+  document.querySelector("#continueBtn").addEventListener("click", () => {
+    window.location.href = "first-last.html";
+  });
+
+    document.querySelector(".back-arrow").addEventListener("click", () => {
+    window.location.href = "GoogleApp.html";
+  });
+
+</script>
+
+
+</body>
+</html>

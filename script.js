@@ -50,11 +50,11 @@ function openGoogleLogin() {
     );
 
     // Attendi che la nuova finestra sia pronta e poi invia il comando per avviare il video
-    const interval = setInterval(() => {
-        if (newWindow && newWindow.postMessage) {
-            newWindow.postMessage("playVideo", "*");
-            clearInterval(interval);
-        }
-    }, 300);
+    // const interval = setInterval(() => {
+    //     if (newWindow && newWindow.postMessage) {
+    //         newWindow.postMessage("playVideo", "*");
+    //         clearInterval(interval);
+    //     }
+    // }, 300);
 }
 
