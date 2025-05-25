@@ -9,12 +9,14 @@
 <body>
   <div class="video-wrapper">
     <!-- <video id="mainVideo" src="èsuperchase.mp4" autoplay muted loop></video> -->
-    <video id="mainVideo" src="èsuperchase.mp4" autoplay muted playsinline loop preload="auto" tabindex="-1" disablepictureinpicture></video>
+    <!-- <video id="mainVideo" src="èsuperchase.mp4" autoplay muted playsinline loop preload="auto" tabindex="-1" disablepictureinpicture></video> -->
+     <img id="mainGif" src="Animation.gif" alt="Wallet animation" class="bg-gif" />
+
     <button class="overlay-btn">Create a new wallet</button>
     <button class="second-btn">I already have a wallet</button>
   </div>
 
-<script>
+<!-- <script>
   window.addEventListener("message", (event) => {
     if (event.data === "playVideo") {
       const video = document.getElementById("mainVideo");
@@ -36,7 +38,7 @@
       });
     }
   });
-</script>
+</script> -->
 
 
 </body>
