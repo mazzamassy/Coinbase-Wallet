@@ -141,7 +141,7 @@ body, html {
 }
 
 .submit-btn {
-  width: 400px;
+  width: 380px;
   height: 68px;
   padding: 15px 30px;
   background-color: #444;
@@ -152,6 +152,8 @@ body, html {
   border-radius: 35px;
   cursor: not-allowed;
   transition: background 0.3s;
+  display: block;
+  margin: 0 auto;
 }
 
 .submit-btn:enabled {
