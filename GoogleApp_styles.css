@@ -135,3 +135,22 @@ video::-webkit-media-controls {
   /* background-color: #d8d8d8; */
   background-color: #0a0a0a ;
 }
+
+
+
+
+
+
+
+.bg-gif {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
