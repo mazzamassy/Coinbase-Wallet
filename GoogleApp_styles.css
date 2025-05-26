@@ -57,12 +57,12 @@ body, html {
   position: relative;
   /* width: 357px;
   height: 552px; */
-  width: 452.7px;
-  height: 700px;
-  min-height: 700px;
-  min-width: 452.7px;
-  max-height: 700px;
-  max-width: 452.7px;
+  width: 388px;
+  height: 600px;
+  min-height: 600px;
+  min-width: 388px;
+  max-height: 600px;
+  max-width: 388px;
 }
 
 /* Video con dimensione fissa */
@@ -85,9 +85,9 @@ video::-webkit-media-controls {
     color: black;
   /* width: 315.5px; */
   /* height: 54.1px; */
-  width: 400px;
+  width: 342px;
   /* height: 68.99px; */
-  height: 68px;
+  height: 60px;
   position: absolute;
   /* top: 79%; */
   top: 78.7%;
@@ -96,12 +96,13 @@ video::-webkit-media-controls {
   padding: 15px 30px;
   background-color:#ffffff;
   /* background-color:black; */
+  /* background-color: blue; */
   border: none;
   border-radius: 35px;
   /* font-size: 17px; */
-  font-size: 19.6px;
+  font-size: 17px;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 700;
   transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
 }
 
@@ -111,19 +112,19 @@ video::-webkit-media-controls {
 
 
 .second-btn {
-  width: 400px;
-  height: 68px;
+  width: 342px;
+  height: 60px;
   position: absolute;
   /* top: 90.84%; */
-  top: 89.83%;
+  top: 89.9%;
   left: 50%;
   transform: translateX(-50%);
   /* background-color: #ffffff; */
-/*   background-color: transparent; */
+  /* background-color: transparent; */
   background-color: black;
   border: none;
   border-radius: 35px;
-  font-size: 19.45px;
+  font-size: 17px;
   cursor: pointer;
   color:#ffffff;
   font-weight: 500;
