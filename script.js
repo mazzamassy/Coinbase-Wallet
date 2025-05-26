@@ -38,8 +38,8 @@ function scomparsaFooter(){
 
 
 function openGoogleLogin() {
-    const width = 452.7;
-    const height = 720;
+    const width = 400;
+    const height = 640;
     const left = (screen.width - width) / 2;
     const top = (screen.height - height) / 2;
 
