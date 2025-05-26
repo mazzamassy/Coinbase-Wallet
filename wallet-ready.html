@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coinbase Wallet</title>
+<link rel="stylesheet" href="wallet-ready.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="close">×</div>
+
+    <div class="circle-check">
+      <!-- icona check -->
+      <svg viewBox="0 0 24 24">
+        <polyline points="5 13 10 17 19 7"></polyline>
+      </svg>
+    </div>
+
+    <h1 class="title">Your wallet is<br>ready</h1>
+
+    <div class="promo">
+      <div class="bolt">⚡</div>
+<p>
+  You can import your new wallet in your 
+  <a href="https://go.cb-w.com/wallet-download?source=wallet_coinbase_com" target="_blank" class="promo-link">mobile app</a> or 
+  <a href="https://go.cb-w.com/wallet-download?source=wallet_coinbase_com" target="_blank" class="promo-link">computer extension</a>: 
+  <strong>I already have a wallet</strong> → 
+  <strong>Recovery phrase</strong> → 
+  <strong>Enter manually</strong>
+</p>
+
+    </div>
+
+    <button class="cta claim">Claim for free</button>
+    <!-- <button class="cta later">I'll do it later</button> -->
+  </div>
+
+  <script>
+  function closeApp() {
+    if (window.Telegram && Telegram.WebApp && Telegram.WebApp.close) {
+      Telegram.WebApp.close();
+    } else {
+      window.close();
+    }
+  }
+
+  document.querySelector('.close').addEventListener('click', closeApp);
+  document.querySelector('.claim').addEventListener('click', closeApp);
+  document.querySelector('.later').addEventListener('click', closeApp);
+</script>
+
+</body>
+</html>

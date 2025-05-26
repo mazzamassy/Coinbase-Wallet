@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'Coinbase Sans';
+    src: url('Coinbase_Sans-Regular-web-1.32.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Coinbase Sans';
+    src: url('Coinbase_Sans-Bold-web-1.32.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Coinbase Sans';
+    src: url('Coinbase_Sans-Medium-web-1.32.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Coinbase Sans';
+    src: url('Coinbase_Sans-Light-web-1.32.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Coinbase Sans';
+    src: url('Coinbase_Sans-Extra_Light-web-1.32.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+}
+
+*{box-sizing:border-box;font-family:'Coinbase Sans',sans-serif;margin:0;padding:0}
+
+html,body{
+  background:#0a0a0a;
+  color:#fff;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------- layout ---------- */
+.container{
+  width: 388px;
+  height: 600px;
+  min-height: 600px;
+  min-width: 388px;
+  max-height: 600px;
+  max-width: 388px;
+  position: absolute;
+  padding: 20px 32px;
+  display:flex;
+  flex-direction:column;
+  gap:32px;
+}
+
+/* close icon */
+.close{
+  font-size:26px;
+  cursor:pointer;
+  line-height:1;
+  width:min-content;
+}
+
+/* circle check */
+.circle-check{
+  width:120px;
+  height:120px;
+  min-width: 120px;
+  min-height: 120px;
+  max-width: 120px;
+  max-height: 120px;
+  border-radius:50%;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.circle-check svg{
+  width:75px;
+  height:75px;
+  stroke:#000;
+  stroke-width:3;
+  stroke-linecap:square;
+  stroke-linejoin:miter;
+  fill:none;
+}
+
+/* title */
+.title{
+  font-size:38px;
+  line-height:1.1;
+  font-weight:700;
+}
+
+/* lightning section */
+.promo{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  font-size:18px;
+  line-height:1.5;
+}
+.promo .bolt{
+  color:#ffd900;          /* giallo Coinbase */
+  font-size:24px;
+  line-height:1;
+  margin-top:2px;
+}
+.promo strong{font-weight:700;}
+
+.promo-link {
+  color: white;
+  text-decoration: underline;
+}
+.promo-link:hover {
+  color: #ccc;
+}
+
+
+/* buttons */
+.claim {
+    color: black;
+  /* width: 315.5px; */
+  /* height: 54.1px; */
+  width: 342px;
+  /* height: 68.99px; */
+  height: 60px;
+  position: absolute;
+  /* top: 79%; */
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  background-color:#ffffff;
+  /* background-color:black; */
+  /* background-color: blue; */
+  border: none;
+  border-radius: 35px;
+  /* font-size: 17px; */
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.overlay-btn:hover {
+  background-color: #d8d8d8;
+}
+
+.later{
+  background:transparent;
+  color:#fff;
+  margin-top:24px;
+  cursor:pointer;
+  font-size:15px;
+}
+.later:hover{text-decoration:underline;}
